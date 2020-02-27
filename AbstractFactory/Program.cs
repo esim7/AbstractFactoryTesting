@@ -16,16 +16,17 @@ namespace AbstractFactory
             switch (key)
             {
                 case "1":
-                    {
-                        new Client().MadePhone(new NokiaFactory());
-                    }
+                        new Client().MadePhone(new NokiaFactory());                  
                     break;
                 case "2":
-                    {
                         new Client().MadePhone(new SamsungFactory());
-                    }
                     break;
+                default:
+                    Console.WriteLine("Unknown operation");
+                    break;
+
             }
+            
         }
     }
 }
